@@ -1,5 +1,9 @@
 # Cambios
 
+## 2026-11-16, Codex, corrección pública de contenido y skyline
+
+Se eliminaron las secciones de proyectos hipotéticos y preguntas frecuentes que Isaac señaló como incorrectas. La copia restante sigue el brief de Jey Miguez. Se sustituyó el skyline genérico por una ilustración SVG inspirada en fotografías de Holy Name of Jesus Church y Marquette Hall. Se aclaró que LUV es un club estudiantil de Loyola University New Orleans. La captación de correos permanece inactiva. La versión con el logo oficial está preparada en una rama local y espera confirmación de aprobación de OMC antes de distribución pública. Verificación: `node verificar.js` pasó diez comprobaciones y `git diff --check` no encontró errores. Playwright mostró cuatro secciones, ilustración cargada y ningún desbordamiento a 1440, 390 y 320 píxeles. Despliegue: pendiente al registrar esta entrada. Reversión: revertir el commit de esta corrección en GitHub.
+
 ## 2026-11-16, Codex, ampliación
 
 Se amplió la landing pública a petición de Isaac. Se añadieron una franja tipográfica, tres puntos de entrada para estudiantes con idea, habilidad o curiosidad, ejemplos marcados expresamente como posibilidades y preguntas frecuentes sobre la lista de eventos. Se reforzó el motivo gráfico de la ruta del tranvía y se hizo más completo el pie de página. El estado de captación de correos no cambió. Verificación: `node verificar.js` pasó ocho comprobaciones y `git diff --check` no encontró errores. Playwright abrió la página en anchos de 1440, 390 y 320 píxeles: siete secciones, sin desbordamiento horizontal y con las preguntas desplegables operativas. Despliegue: GitHub Pages informó `built`; la versión ampliada y el CSS respondieron HTTP 200 en https://jivalare-lab.github.io/luv-landing/. Reversión: revertir el commit de ampliación en GitHub.

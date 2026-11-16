@@ -4,7 +4,9 @@ Single-page recruitment site for Loyola University Ventures, based on the Novemb
 
 ## Current scope
 
-The page explains LUV and its Connect, Collab, Create invitation. It includes three ways to start, hypothetical project prompts, and common questions. The prompts are clearly labeled as ideas rather than existing club projects. Event-update signup is intentionally not active because the packet does not provide a mailing list, approved form destination, data owner, or privacy language. No visitor email is collected or stored.
+The page explains LUV and its Connect, Collab, Create invitation. The campus illustration is an original SVG based on [Holy Name of Jesus Church](https://commons.wikimedia.org/wiki/File:New_Orleans_(LA,_USA)_Holy_Name_of_Jesus_Church.jpg) and an [official Marquette Hall photograph](https://css.loyno.edu/sites/default/files/2022-05/marquette.jpg). It is an illustration, not a surveyed skyline or an official university mark. Event-update signup is intentionally not active because the packet does not provide a mailing list, approved form destination, data owner, or privacy language. No visitor email is collected or stored.
+
+An unmodified institutional logo has been prepared on the local `feat/loyola-official-logo` branch. It is awaiting confirmation of university marketing approval before public distribution. See [Loyola's logo rules](https://omc.loyno.edu/policies-procedures/loyola-brand-assets-logos-mascots-marks) and [approval requirements](https://omc.loyno.edu/policies-procedures/omc-approval-requirements).
 
 ## Local check
 

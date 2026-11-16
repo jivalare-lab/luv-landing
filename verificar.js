@@ -8,7 +8,9 @@ const checks = [
   ['mobile layout', css.includes('@media(max-width:680px)')],
   ['keyboard focus', css.includes(':focus-visible')],
   ['reduced motion', css.includes('prefers-reduced-motion:reduce')],
-  ['no fake signup', !/<form\b/i.test(html) && html.includes("Signups will open here")],
+  ['no fake signup', !/<form\b/i.test(html) && html.includes('Signups for LUV event updates will open here soon')],
+  ['campus illustration included', fs.existsSync('assets/loyola-campus-silhouette.svg') && html.includes('assets/loyola-campus-silhouette.svg')],
+  ['invented sections removed', !html.includes('What could we build together?') && !html.includes('A few good questions')],
   ['no long dash', !/[—–]/.test(html + css)],
 ];
 for (const [name, ok] of checks) console.log(`${ok ? 'PASS' : 'FAIL'} ${name}`);
