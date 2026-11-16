@@ -4,7 +4,7 @@ Single-page recruitment site for Loyola University Ventures, based on the Novemb
 
 ## Current scope
 
-The page explains LUV and its Connect, Collab, Create invitation. Event-update signup is intentionally not active because the packet does not provide a mailing list, approved form destination, data owner, or privacy language. No visitor email is collected or stored.
+The page explains LUV and its Connect, Collab, Create invitation. It includes three ways to start, hypothetical project prompts, and common questions. The prompts are clearly labeled as ideas rather than existing club projects. Event-update signup is intentionally not active because the packet does not provide a mailing list, approved form destination, data owner, or privacy language. No visitor email is collected or stored.
 
 ## Local check
 
