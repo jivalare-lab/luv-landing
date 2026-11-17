@@ -3,13 +3,15 @@ const html = fs.readFileSync('index.html', 'utf8');
 const css = fs.readFileSync('styles.css', 'utf8');
 const checks = [
   ['one main heading', (html.match(/<h1\b/g) || []).length === 1],
-  ['landmark and section anchors', ['id="main"','id="about"','id="why"','id="updates"'].every(s => html.includes(s))],
+  ['landmark and section anchors', ['id="main"','id="about"','id="why"','id="building"','id="new-orleans"','id="loyola"','id="updates"'].every(s => html.includes(s))],
   ['all local anchors resolve', [...html.matchAll(/href="#([^"]+)"/g)].every(([, id]) => html.includes(`id="${id}"`))],
   ['mobile layout', css.includes('@media(max-width:680px)')],
   ['keyboard focus', css.includes(':focus-visible')],
   ['reduced motion', css.includes('prefers-reduced-motion:reduce')],
   ['no fake signup', !/<form\b/i.test(html) && html.includes("There isn't a signup yet")],
   ['route motion script', fs.existsSync('script.js') && html.includes('src="script.js"') && fs.readFileSync('script.js', 'utf8').includes('IntersectionObserver')],
+  ['real Loyola resource links', ['https://startup.loyno.edu/','https://startup.loyno.edu/about/dr-bobby-lori-kent-savoie-ideation-lab','https://startup.loyno.edu/programs/wolf-pack-launchu'].every(s => html.includes(s))],
+  ['external links protected', (html.match(/target="_blank"/g) || []).length === (html.match(/rel="noopener noreferrer"/g) || []).length],
   ['campus illustration included', fs.existsSync('assets/loyola-campus-silhouette.svg') && html.includes('assets/loyola-campus-silhouette.svg')],
   ['invented sections removed', !html.includes('What could we build together?') && !html.includes('A few good questions')],
   ['no long dash', !/[—–]/.test(html + css)],
