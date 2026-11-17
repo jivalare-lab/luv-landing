@@ -3,72 +3,77 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="LUV is the student entrepreneurship club at Loyola University New Orleans. Connect, collaborate, and create with other students.">
-  <meta name="theme-color" content="#740017">
+  <meta name="description" content="LUV is Loyola University Ventures, a student entrepreneurship club in New Orleans. Meet people, work on ideas, and make something together.">
+  <meta name="theme-color" content="#650018">
   <title>LUV | Loyola University Ventures</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+  <div class="reading-progress" aria-hidden="true"></div>
   <header class="site-header">
-    <div class="site-nav-row">
-      <a class="luv-brand" href="#top"><strong>LUV</strong><span>Loyola University Ventures</span></a>
-      <nav aria-label="Main navigation"><a href="#about">The club</a><a href="#why">What we do</a><a href="#building">Building</a><a href="#new-orleans">New Orleans</a><a href="#loyola">At Loyola</a><a class="nav-cta" href="#updates">Updates</a></nav>
-    </div>
+    <a class="brand" href="#top" aria-label="LUV, back to top"><strong>LUV</strong><span>Loyola University<br>Ventures</span></a>
+    <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false">Menu <span aria-hidden="true">+</span></button>
+    <nav id="site-nav" aria-label="Main navigation">
+      <a href="#about">The club</a>
+      <a href="#why">What we do</a>
+      <a href="#building">Building</a>
+      <a href="#new-orleans">New Orleans</a>
+      <a href="#loyola">At Loyola</a>
+      <a class="nav-cta" href="#updates">Updates <span aria-hidden="true">↗</span></a>
+    </nav>
   </header>
 
   <main id="main">
     <section class="hero" id="top" aria-labelledby="hero-title">
-      <div class="hero-inner">
-        <div class="hero-copy">
-          <h1 id="hero-title"><span class="hero-line-mask"><span class="hero-line">I <span class="heart" role="img" aria-label="love">♥</span></span></span><span class="hero-line-mask"><span class="hero-line">BUILDING</span></span></h1>
-          <p class="hero-fullname">LUV <span>Loyola University Ventures</span></p>
-          <p class="hero-affiliation">A student club at Loyola University New Orleans</p>
-          <p class="hero-description">Have an idea? Bring it. No idea yet? That's fine too.</p>
-          <a class="hero-button" href="#about">What is LUV? <span aria-hidden="true">↗</span></a>
-        </div>
-        <img class="campus-art" src="assets/loyola-campus-silhouette.svg" width="960" height="520" alt="" aria-hidden="true">
+      <img class="hero-photo" src="assets/st-charles-loyola.webp" width="1920" height="1440" alt="A St. Charles Avenue streetcar passing Loyola's campus" fetchpriority="high">
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="hero-kicker">Loyola University Ventures <span>New Orleans, Louisiana</span></p>
+        <h1 id="hero-title"><span class="hero-line"><span>I <em aria-label="love">♥</em></span></span><span class="hero-line"><span>BUILDING.</span></span></h1>
+        <div class="hero-bottom"><p>Students who want to make something happen together.</p><a class="round-link" href="#about" aria-label="Learn about LUV"><span aria-hidden="true">↘</span></a></div>
       </div>
-      <svg class="hero-curve" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30C240 87 465 65 720 46c249-19 489-13 720 34H0Z" fill="#fffaf4"/></svg>
+      <p class="hero-photo-note">St. Charles Avenue at Loyola</p>
     </section>
 
-    <div class="ticker" aria-hidden="true"><div class="ticker-track"><span>Have an idea. Find your people. Make something.</span><span>Have an idea. Find your people. Make something.</span></div></div>
-
-    <section class="about content-wrap" id="about" aria-labelledby="about-title">
-      <p class="section-label">The club</p>
-      <div class="about-grid"><h2 id="about-title">You can start here.</h2><div><p>LUV brings Loyola students together to work on ideas. Come with one of your own, or meet someone who has one.</p><p>You don't need a company, a pitch deck, or a business major to care about making something better.</p></div></div>
+    <section class="about section-shell" id="about" aria-labelledby="about-title">
+      <div class="about-index"><span class="small-mark">The club</span><p>A student entrepreneurship club at Loyola University New Orleans.</p></div>
+      <div class="about-main"><h2 id="about-title">No startup?<br><span>Come anyway.</span></h2><p>You don't need a company or a finished idea. LUV is for Loyola students who want to meet people, work on ideas, and make something with them.</p><img src="assets/loyola-campus-silhouette.svg" width="960" height="520" alt="" aria-hidden="true" loading="lazy"></div>
     </section>
 
-    <section class="why content-wrap" id="why" aria-labelledby="why-title">
-      <div class="section-title"><h2 id="why-title">What LUV is for.</h2></div>
-      <div class="pillars" data-route>
-        <article><span class="route-stop" aria-hidden="true"></span><h3>Connect</h3><p>Meet other students who want to work on ideas.</p></article>
-        <article><span class="route-stop" aria-hidden="true"></span><h3>Collab</h3><p>Work on a project with someone, yours or theirs.</p></article>
-        <article><span class="route-stop" aria-hidden="true"></span><h3>Create</h3><p>Make a first version, even if it's rough.</p></article>
+    <section class="why" id="why" aria-labelledby="why-title">
+      <div class="section-shell"><div class="why-heading"><span class="small-mark">What LUV is for</span><h2 id="why-title">It helps to have someone to build with.</h2></div>
+        <div class="ways">
+          <article><h3>Connect<span aria-hidden="true">↗</span></h3><p>Meet students who are building things and students who want to start.</p></article>
+          <article><h3>Collab<span aria-hidden="true">↗</span></h3><p>Bring your idea to someone else's skill, or your skill to someone else's idea.</p></article>
+          <article><h3>Create<span aria-hidden="true">↗</span></h3><p>Turn a conversation into something you can put in front of people.</p></article>
+        </div>
       </div>
     </section>
 
     <section class="building" id="building" aria-labelledby="building-title">
-      <div class="content-wrap building-inner">
-        <div class="building-heading"><p class="section-label">Entrepreneurship</p><h2 id="building-title">Start before the business plan.</h2></div>
-        <div class="building-steps">
-          <article><span class="step-number">01</span><h3>Notice</h3><p>A problem you keep running into. Something on campus or in the city that could work better.</p></article>
-          <article><span class="step-number">02</span><h3>Talk</h3><p>Ask the people who live with it. Find out what you're missing before you try to fix it.</p></article>
-          <article><span class="step-number">03</span><h3>Make</h3><p>Try a small version. Show it to someone. Keep what works and change what doesn't.</p></article>
+      <div class="section-shell building-grid">
+        <div class="building-intro"><span class="small-mark">A way to begin</span><h2 id="building-title">Make the rough version.</h2><p>Here's one way to get an idea moving.</p></div>
+        <div class="building-list">
+          <article><span>01</span><div><h3>Notice something.</h3><p>A problem on campus or in the city that you keep running into.</p></div></article>
+          <article><span>02</span><div><h3>Ask around.</h3><p>Talk to the people who deal with it. Find out what you've missed.</p></div></article>
+          <article><span>03</span><div><h3>Try a version.</h3><p>Show someone what you made. Then change what didn't work.</p></div></article>
         </div>
-        <p class="building-end">A first version counts.</p>
       </div>
     </section>
 
     <section class="city" id="new-orleans" aria-labelledby="city-title">
-      <div class="content-wrap city-grid">
-        <div class="city-copy"><p class="section-label">New Orleans</p><h2 id="city-title">There's a whole city outside the classroom.</h2><p>New Orleans has music venues, restaurants, artists, and neighborhood businesses. Spend time paying attention to the people behind them. That's part of learning to build.</p></div>
-        <div class="city-scene" aria-hidden="true"><div class="city-sun"></div><div class="city-horizon"><span></span><span></span><span></span><span></span><span></span><span></span></div><div class="city-track"></div><svg class="streetcar" viewBox="0 0 320 190"><path d="M31 80 Q34 54 60 53 H259 Q285 53 289 80 L299 142 Q301 154 286 154 H34 Q19 154 21 142Z" fill="#fffaf4" stroke="#630018" stroke-width="8"/><path d="M53 82 H267 M53 114 H267" stroke="#630018" stroke-width="7"/><path d="M83 82 V114 M124 82 V114 M165 82 V114 M206 82 V114 M247 82 V114" stroke="#630018" stroke-width="6"/><path d="M80 53 L91 27 H230 L242 53 M159 26 V10" fill="none" stroke="#630018" stroke-width="7" stroke-linejoin="round"/><path d="M34 135 H286" stroke="#ffbd24" stroke-width="8"/><circle cx="73" cy="158" r="11" fill="#630018"/><circle cx="247" cy="158" r="11" fill="#630018"/></svg></div>
-      </div>
+      <div class="city-photo-wrap"><img src="assets/frenchmen-musicians.webp" width="1920" height="1446" alt="Musicians playing at Maison on Frenchmen Street" loading="lazy"></div>
+      <div class="city-content section-shell"><span class="small-mark">Beyond campus</span><h2 id="city-title">New Orleans<br>is right outside.</h2><p>Loyola sits on St. Charles Avenue. Across the city, artists, musicians, cooks, and shop owners make their own work. There's plenty to notice beyond campus.</p></div>
+      <p class="city-caption">Musicians at Maison on Frenchmen Street. November 2025.</p>
     </section>
 
-    <section class="resources content-wrap" id="loyola" aria-labelledby="resources-title">
-      <div class="resources-heading"><p class="section-label">At Loyola</p><h2 id="resources-title">More at Loyola.</h2><p>These Loyola resources are separate from LUV. They're good places to learn more about entrepreneurship on campus.</p></div>
+    <section class="resources section-shell" id="loyola" aria-labelledby="resources-title">
+      <div class="resources-intro"><span class="small-mark">Around Loyola</span><h2 id="resources-title">More at Loyola.</h2><p>These university resources are separate from LUV. They're here if you want to keep exploring.</p></div>
       <div class="resource-list">
         <a href="https://startup.loyno.edu/" target="_blank" rel="noopener noreferrer"><span>Center for Entrepreneurship and Community Development</span><small>Programs and opportunities at Loyola</small><b aria-hidden="true">↗</b></a>
         <a href="https://startup.loyno.edu/about/dr-bobby-lori-kent-savoie-ideation-lab" target="_blank" rel="noopener noreferrer"><span>Savoie Ideation Lab</span><small>A campus space for working through ideas</small><b aria-hidden="true">↗</b></a>
@@ -76,12 +81,11 @@
       </div>
     </section>
 
-    <section class="updates content-wrap" id="updates" aria-labelledby="updates-title">
-      <div class="updates-panel"><div><p class="updates-label">What's next</p><h2 id="updates-title">Find out when LUV gets together.</h2><p>We're setting up the event list. There isn't a signup yet. Check back here for the link.</p></div><p class="updates-note">The event list and official club membership are separate.</p></div>
+    <section class="updates" id="updates" aria-labelledby="updates-title">
+      <div class="section-shell updates-grid"><span class="small-mark">Event updates</span><div><h2 id="updates-title">We'll post LUV event updates here.</h2><p>There isn't a signup yet. Check back here for the link when it's ready.</p><p class="membership-note">Event updates and official club membership are separate.</p></div></div>
     </section>
   </main>
 
-  <footer class="site-footer"><div><strong>LUV</strong><span>Loyola University Ventures</span></div><a href="#top">Back to top ↑</a></footer>
-  <script src="script.js" defer></script>
+  <footer class="site-footer"><div><strong>LUV</strong><span>Loyola University Ventures</span></div><div class="footer-links"><a href="#top">Back to top ↑</a><small>Streetcar: <a href="https://commons.wikimedia.org/wiki/File:St_Charles_Avenue_Streetcar_in_front_of_Loyola_University_New_Orleans_Oct_2025.jpg" target="_blank" rel="noopener noreferrer">Infrogmation</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>. Musicians: <a href="https://commons.wikimedia.org/wiki/File:Frenchmen_Street,_New_Orleans,_November_2025_-_Band_at_Maison.jpg" target="_blank" rel="noopener noreferrer">Jeremy Thompson</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>. Both converted to WebP.</small></div></footer>
 </body>
 </html>
