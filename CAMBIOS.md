@@ -1,5 +1,9 @@
 # Cambios
 
+## 2026-11-16, Codex, voz y movimiento
+
+Se reescribió la landing con frases más directas y sin prometer actividades o registro que aún no existen. Se cambiaron las tarjetas de Connect, Collab y Create por una composición editorial con la ruta amarilla del diseño. El titular, la ilustración y la ruta tienen movimientos breves; el sitio respeta la preferencia de movimiento reducido. Se mantuvo la aclaración sobre la lista de eventos y la membresía. Como referencias de tono y ritmo se revisaron los sitios locales de Foxy Floral, Kala Salón, Heart of Passion y ECG. Verificación: `node verificar.js`, `node --check script.js`, `git diff --check` y revisión en Chromium a 1440, 390 y 320 píxeles; sin desbordamiento horizontal, con ruta visible y animaciones desactivadas bajo movimiento reducido. Despliegue: GitHub Pages. Reversión: revertir este commit.
+
 ## 2026-11-16, Codex, corrección pública de contenido y skyline
 
 Se eliminaron las secciones de proyectos hipotéticos y preguntas frecuentes que Isaac señaló como incorrectas. La copia restante sigue el brief de Jey Miguez. Se sustituyó el skyline genérico por una ilustración SVG inspirada en fotografías de Holy Name of Jesus Church y Marquette Hall. Se aclaró que LUV es un club estudiantil de Loyola University New Orleans. La captación de correos permanece inactiva. La versión con el logo oficial está preparada en una rama local y espera confirmación de aprobación de OMC antes de distribución pública. Verificación: `node verificar.js` pasó diez comprobaciones y `git diff --check` no encontró errores. Playwright mostró cuatro secciones, ilustración cargada y ningún desbordamiento a 1440, 390 y 320 píxeles. Despliegue: GitHub Pages informó `built`; el HTML corregido y el SVG respondieron HTTP 200 en https://jivalare-lab.github.io/luv-landing/. Reversión: revertir el commit de esta corrección en GitHub.
